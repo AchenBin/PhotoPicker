@@ -1,5 +1,8 @@
 # PhotoPicker
-照片选择器
+一个简单好用的照片选择器
+![image](https://github.com/AchenBin/PhotoPicker/blob/master/photopickerlibrary/src/main/res/mipmap-hdpi/round_checked.png)
+
+
 ##### 已适配
 	Android 10  android:requestLegacyExternalStorage="true"
 	Android 7   fileProvider
