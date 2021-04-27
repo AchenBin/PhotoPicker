@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="PictureSelectActivity">
+
+   <com.chenbin.photopickerlibrary.Views.TitleBar
+       android:id="@+id/title_pct_select"
+       app:title="@string/select_picture"
+       app:btn_text="@string/confirm"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+
+   <androidx.appcompat.widget.AppCompatSpinner
+       android:id="@+id/spinner_album"
+       android:layout_width="match_parent"
+       android:background="@color/white"
+       android:layout_height="wrap_content"/>
+   <FrameLayout
+       android:id="@+id/banner_container"
+       android:background="@color/white"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_weight="1"
+       android:background="@color/white">
+      <androidx.recyclerview.widget.RecyclerView
+          android:background="@color/white"
+          android:id="@+id/recycler_img_select"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+
+          android:scrollbars="vertical"
+          android:layout_marginTop="@dimen/fu_border_img"
+          android:layout_marginBottom="@dimen/fu_border_img"
+          android:layout_marginLeft="@dimen/fu_border_img"
+          android:layout_marginRight="@dimen/fu_border_img"/>
+   </LinearLayout>
+
+<!--   -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="130dp"
+       android:background="@color/deep_gray"
+       android:adjustViewBounds="true"
+       android:orientation="vertical">
+      <TextView
+          android:id="@+id/is_select_num"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="2"
+          android:textSize="14sp"
+          android:gravity="center_vertical"
+          android:paddingLeft="6dp"
+          android:background="@color/deep_gray"
+          android:textColor="@color/white"
+          android:text="@string/please_select_photo"/>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recycler_is_select"
+          android:layout_weight="1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="2.7"/>
+   </LinearLayout>
+
+</LinearLayout>

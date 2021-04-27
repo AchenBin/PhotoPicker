@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">图片选择框架</string>
+
+
+    <!--邮箱-->
+    <string name="company_mail_address">845362490@qq.com</string>
+
+    <string name="back">返回</string>
+    <string name="confirm">确定</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="complete">完成</string>
+    <string name="select_photo">选择相册</string>
+    <string name="select_picture">选择照片</string>
+    <string name="all_picture">所有照片</string>
+    <string name="next">下一步</string>
+    <string name="recently_edit">最近编辑</string>
+    <string name="mine">我的</string>
+    <string name="community">社区</string>
+    <string name="study">学习</string>
+    <string name="chat">聊天</string>
+    <string name="message">消息</string>
+
+
+    <string name="collect">收藏</string>
+    <string name="setting">设置</string>
+    <string name="download_failure">下载失败</string>
+    <string name="please_select_photo">请选择照片</string>
+    <string name="has_selected">已选择</string>
+    <string name="photo">张照片</string>
+    <string name="hide_watermark">去水印</string>
+    <string name="watermark_is_hided">已去水印</string>
+    <string name="change_tamplete">重新选择海报模板</string>
+    <string name="beauty">美化</string>
+    <string name="change_photo">更换</string>
+    <string name="enlarge">放大</string>
+    <string name="narrow">缩小</string>
+    <string name="content">内容</string>
+    <string name="please_enter_some">请输入内容</string>
+    <string name="font_style">字体</string>
+    <string name="color">颜色</string>
+    <string name="size">大小</string>
+    <string name="slide_to_adjust_the_font_size">滑动调整字体大小</string>
+    <string name="edit_photo">编辑照片</string>
+    <string name="filter">滤镜</string>
+    <string name="adjust">调节</string>
+    <string name="light">亮度</string>
+    <string name="contrast">对比度</string>
+    <string name="saturation">饱和度</string>
+    <string name="white_balance">色温</string>
+    <string name="highlight">亮部</string>
+    <string name="shadow">暗部</string>
+    <string name="sharpen">锐化</string>
+    <string name="edit">编辑</string>
+    <string name="free_scale">自由比例</string>
+    <string name="scale">裁剪</string>
+    <string name="rotation">旋转</string>
+    <string name="reset">重置</string>
+    <string name="free">自由</string>
+    <string name="_1_1">1:1</string>
+    <string name="_9_16">9:16</string>
+    <string name="_16_9">16:9</string>
+    <string name="_4_3">4:3</string>
+    <string name="_3_4">3:4</string>
+    <string name="_3_2">3:2</string>
+    <string name="_2_3">2:3</string>
+    <string name="tuYa">涂鸦</string>
+    <string name="is_already_saved">已经保存到相册及作品库</string>
+    <string name="my_work">我的作品</string>
+    <string name="share">分享</string>
+    <string name="face_beauty">美颜</string>
+    <string name="sure_cancel">确定要放弃已编辑内容？</string>
+    <string name="clean_cache">清除缓存</string>
+    <string name="rate_app">给我们评价</string>
+    <string name="feedback">建议反馈</string>
+    <string name="you_have_not_appStore">您的手机没有安装Android应用市场</string>
+    <string name="suggestion_feedback">建议反馈</string>
+    <string name="mail_title">对“PIS”APP的建议：</string>
+    <string name="suggestion_hint">对“PIS”APP的建议：</string>
+    <string name="cache_is_cleaned">缓存已清除</string>
+    <string name="poster_template">海报制作</string>
+    <string name="watch_ad_to_unlock">观看视频广告解锁此模板</string>
+    <string name="watch_video_to_hide_watermask">观看视频广告去除水印</string>
+    <string name="erase">擦除</string>
+    <string name="coloring">上色</string>
+    <string name="recolor">上色</string>
+    <string name="mask">蒙版</string>
+    <string name="primaryColor">原色</string>
+    <string name="seek_size">大小：</string>
+    <string name="seek_alpha">透明度：</string>
+    <string name="background_blur">背景虚化</string>
+    <string name="normal">普通</string>
+    <string name="circle">圆</string>
+    <string name="horizontal_line">横线</string>
+    <string name="new_create">新建</string>
+    <string name="material">素材</string>
+    <string name="all">全部</string>
+    <string name="emoticon">表情</string>
+    <string name="emoji">表情</string>
+    <string name="sticker">贴图</string>
+    <string name="scan_all">查看全部</string>
+    <string name="request_permission_again">缺少必要权限，可能导致无法正常使用，是否同意再次申请权限？</string>
+    <string name="most_select">最多可选</string>
+    <string name="item_photos">张图片</string>
+    <string name="clause">用户条款与隐私政策</string>
+    <string name="please_permit_clause">请阅读并同意《用户条款》与《隐私政策》</string>
+    <string name="Terms_of_Use">用户条款</string>
+    <string name="Privacy_Policy">隐私政策</string>
+    <string name="picture_in_picture">画中画</string>
+    <string name="select_a_new_template">选择一个模板</string>
+
+
+    <string name="is_permit">已阅读并同意</string>
+    <string name="permit_tips">app将申请必要的权限以保证功能正常运行</string>
+    <string name="change_headicon">更换头像</string>
+    <string name="user_info">个人信息</string>
+    <string name="my_course_timetable">我的课表</string>
+
+    <string name="invitation">动态</string>
+    <string name="lost_and_found">失物招领</string>
+    <string name="seek_help">求助</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="revert">回复</string>
+    <string name="create_invitation">发表动态</string>
+    <string name="publish">发表</string>
+    <string name="delete">删除</string>
+    <string name="my_invitaion">个人动态</string>
+    <string name="solved">已解决</string>
+    <string name="solve">解决</string>
+    <string name="sign_out">退出登录</string>
+    <string name="friend">好友</string>
+    <string name="add_friend">添加好友</string>
+    <string name="delete_friend">删除好友</string>
+    <string name="search">查询</string>
+    <string name="class_select">选修课程</string>
+    <string name="class_create">创建课程</string>
+    <string name="update_password">修改密码</string>
+    <string name="send">发送</string>
+</resources>

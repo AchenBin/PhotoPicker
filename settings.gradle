@@ -1,0 +1,2 @@
+include ':Demo', ':photopickerlibrary'
+rootProject.name='PhotoPicker'

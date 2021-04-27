@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--阴影大小-->
+    <dimen name="shadow">1.4dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="navigation_height">56dp</dimen>
+    <!--带标题的说明和填写项-->
+    <dimen name="key">95dp</dimen>
+    <dimen name="keyLong">115dp</dimen>
+    <dimen name="keyHeight">36dp</dimen>
+
+    <!--修正底部导航栏文字离底部的高度-->
+    <dimen name="fixed_height_bottom_padding">6dp</dimen>
+
+    <dimen name="actionBar_Height">45dp</dimen>
+    <dimen name="radius_block">8dp</dimen>
+    <dimen name="radius_button">34dp</dimen>
+
+
+    <dimen name="radius_poster">5dp</dimen>
+    <dimen name="radius_posterX2">10dp</dimen>
+    <dimen name="margin_poster">7dp</dimen>
+    <dimen name="margin_posterX2">14dp</dimen>
+
+    <dimen name="title_bar_height">40dp</dimen>
+
+    <dimen name="border_img">0.5dp</dimen>
+    <dimen name="fu_border_img">-0.5dp</dimen>
+
+    <dimen name="margin_line">8dp</dimen>
+    <dimen name="weight_line">1dp</dimen>
+
+    <dimen name="default_keyboard_height">275dp</dimen>
+
+    <dimen name="radius_big">40dp</dimen>
+    <dimen name="border_height">0.6dp</dimen>
+
+    <!--圆角大小-->
+    <dimen name="radius_block_small">8dp</dimen>
+    <dimen name="radius_btn">46dp</dimen>
+</resources>

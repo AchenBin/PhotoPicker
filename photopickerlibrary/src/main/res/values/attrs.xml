@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义标题栏-->
+    <declare-styleable name="TitleBar">
+        <attr name="title" format="string"/>
+        <attr name="btn_text" format="string"/>
+        <attr name="btn_src" format="reference"/>
+    </declare-styleable>
+
+    <!--个人主页选项-->
+    <declare-styleable name="SettingItem">
+        <attr name="src" format="reference"/>
+        <attr name="text" format="string"/>
+        <attr name="border_bottom" format="boolean"/>
+    </declare-styleable>
+
+</resources>
