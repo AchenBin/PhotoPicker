@@ -37,9 +37,8 @@ Step 3. app.gradle中：添加Java8语法
 			.setOnSelectConfirmListener(new OnSelectConfirmListener() {	//选择回调监听
 			    @Override
 			    public void onSelected(List<PictureItem> pictureItemList) {		//获取选择图片列表，PictureItem中的get方法可获取图片的各种信息
-				Glide.with(MainActivity.this)
-					.load(pictureItemList.get(0).getPath())
-					.into(img);
+				//可以通过返回的列表进行操作了
+				...
 			    }
 			})
 			.start();
