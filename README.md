@@ -1,6 +1,6 @@
 # PhotoPicker
 一个简单好用的照片选择器
-![image](https://github.com/AchenBin/PhotoPicker/blob/master/photopickerlibrary/src/main/res/mipmap-hdpi/round_checked.png)
+![image](https://github.com/AchenBin/PhotoPicker/blob/master/photopickerlibrary/src/main/res/mipmap-hdpi/delete.png)
 
 
 ##### 已适配
