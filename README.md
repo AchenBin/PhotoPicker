@@ -1,5 +1,12 @@
 # PhotoPicker
 照片选择器
+#### 已适配
+Android 10  android:requestLegacyExternalStorage="true"
+Android 7   fileProvider
+#### 已自动动态获取存储权限
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
 ### 导入依赖
 
