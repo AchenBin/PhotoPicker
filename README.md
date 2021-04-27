@@ -1,8 +1,9 @@
 # PhotoPicker
 一个简单好用的照片选择器
 
+演示
 
-![image](https://github.com/AchenBin/PhotoPicker/blob/master/photopickerlibrary/src/main/res/mipmap-hdpi/bg_qdy.jpg)
+![image](https://github.com/AchenBin/PhotoPicker/blob/master/demo.gif)
 
 
 ##### 已适配
