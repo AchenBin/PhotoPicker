@@ -38,18 +38,23 @@ Step 3. app.gradle中：添加Java8语法
 	}
 
 ### 使用
-	  new PhotoPickerBuilder()
-			.with(this)	//设置context
-			.setMaxSelectNum(1)	//设置最大选择数量
-			.setOnSelectConfirmListener(new OnSelectConfirmListener() {	//选择回调监听
-			    @Override
-			    public void onSelected(List<PictureItem> pictureItemList) {		//获取选择图片列表，PictureItem中的get方法可获取图片的各种信息
-				//可以通过返回的列表进行操作了
-				...
-			    }
-			})
-			.start();
+	 new PhotoPickerBuilder(this)		//需要提供context
+                .setMaxSelectNum(1)		//设置最大选择数量
+		.setOnSelectConfirmListener(new OnSelectConfirmListener() {	//选择回调监听
+		    @Override
+		    public void onSelected(List<PictureItem> pictureItemList) {		//获取选择图片列表，PictureItem中的get方法可获取图片的各种信息
+			//可以通过返回的列表进行操作了
+			...
+		    }
+		})
+		.start();
 			
+### 方法说明
+	.setMaxSelectNum(XX)		 	//设置最大选择数量
+	.setColumnNum(XX)		 	//设置浏览页面图片列数
+	.setTitleBarTextColor(R.color.XX)	//设置标题栏字体颜色
+	.setTitleBarHeight(getResources().getDimension(R.dimen.XXX))//设置标题栏高度
+	.setTitleBarColor(R.color.XX)		//设置标题栏背景颜色
 
 ### PictureItem说明
 	public class PictureItem {
