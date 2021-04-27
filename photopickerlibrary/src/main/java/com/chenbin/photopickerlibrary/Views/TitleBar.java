@@ -52,7 +52,7 @@ public class TitleBar extends ConstraintLayout {
             setNextBtnSrc(context.getDrawable(id));
         }
 
-        enableColor = getContext().getColor(R.color.white);
+        setTitleBarTextColor(getResources().getColor(R.color.white,null));
     }
 
 

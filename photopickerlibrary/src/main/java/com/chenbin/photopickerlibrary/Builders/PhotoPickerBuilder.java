@@ -31,6 +31,7 @@ public class PhotoPickerBuilder {
         this.columnNum = 4;
         this.titleBar_height = context.getResources().getDimension(R.dimen.actionbar_height);
         this.titleBar_color = context.getResources().getColor(R.color.colorPrimaryDark,null);
+        this.titleBar_text_color = context.getResources().getColor(R.color.white,null);
         this.onSelectConfirmListener = new OnSelectConfirmListener() {
             @Override
             public void onSelected(List<PictureItem> pictureItemList) {

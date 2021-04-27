@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         new PhotoPickerBuilder(this)
                 .setMaxSelectNum(1)
                 .setColumnNum(3)
-                .setTitleBarTextColor(R.color.light_red)
                 .setTitleBarHeight(getResources().getDimension(R.dimen.actionbar_height))
                 .setTitleBarColor(R.color.black)
                 .setOnSelectConfirmListener(new OnSelectConfirmListener() {
