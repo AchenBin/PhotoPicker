@@ -43,3 +43,16 @@ Step 3. app.gradle中：添加Java8语法
 			    }
 			})
 			.start();
+			
+
+### PictureItem说明
+	public class PictureItem {
+	    private String path;    //图片的绝对地址
+	    private String type;    //图片的类型
+	    private String name;    //图片名称
+	    private float size;     //图片大小
+	    private String width;   //图片宽度
+	    private String height;  //图片高度
+	    private long Date;      //图片生成日期
+	    private int orientation;    //图片角度
+	}
