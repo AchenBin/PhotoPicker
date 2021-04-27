@@ -63,9 +63,9 @@ public class PctSelectedAdapter extends RecyclerView.Adapter<PctSelectedAdapter.
                                     +" "+
                                     holder.itemView.getContext().getString(R.string.photo));
 
-//                    PictureSelectActivity.titleBar.setNextEnable(true);
+                    PictureSelectActivity.titleBar.setNextEnable(true);
                 }else{
-//                    PictureSelectActivity.titleBar.setNextEnable(false);
+                    PictureSelectActivity.titleBar.setNextEnable(false);
                     PictureSelectActivity.is_select_num.setText( holder.itemView.getContext().getString(R.string.please_select_photo));
                 }
 

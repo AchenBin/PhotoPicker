@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 import com.chenbin.photopickerlibrary.Adapters.PctSelectedAdapter;
 import com.chenbin.photopickerlibrary.Adapters.PictureSelectAdapter;
 import com.chenbin.photopickerlibrary.Adapters.SpinnerAdapter;
+import com.chenbin.photopickerlibrary.Builders.PhotoPickerBuilder;
+import com.chenbin.photopickerlibrary.Builders.PhotoPickerConfig;
 import com.chenbin.photopickerlibrary.Interfaces.OnSelectConfirmListener;
 import com.chenbin.photopickerlibrary.R;
 import com.chenbin.photopickerlibrary.Utils.DateComparator;
@@ -33,6 +36,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import butterknife.ButterKnife;
 import me.everything.android.ui.overscroll.OverScrollDecoratorHelper;
 
 
@@ -43,7 +47,8 @@ public class PictureSelectActivity extends BaseActivity {
 
     private static final String TAG = "PictureSelectActivity";
 
-    private static int maxNum = 9;
+    private int maxNum = 9;
+    private int columnNum = 4;  //图片显示列数
     private static OnSelectConfirmListener onSelectConfirmListener;
 
     private List<PictureItem> pictureInfoList;
@@ -61,25 +66,50 @@ public class PictureSelectActivity extends BaseActivity {
 
     private AppCompatSpinner spinner_album;
 
-    public static void actionStart(Context context, int maxNum1, OnSelectConfirmListener onSelectConfirmListener1) {
-        maxNum = maxNum1;
+//    public static void actionStart(Context context, int maxNum1, OnSelectConfirmListener onSelectConfirmListener1) {
+//        maxNum = maxNum1;
+//        onSelectConfirmListener = onSelectConfirmListener1;
+//        Intent intent = new Intent(context,PictureSelectActivity.class);
+//        context.startActivity(intent);
+//    }
+
+    public static void actionStart(Context context, PhotoPickerConfig config, OnSelectConfirmListener onSelectConfirmListener1) {
         onSelectConfirmListener = onSelectConfirmListener1;
         Intent intent = new Intent(context,PictureSelectActivity.class);
+        intent.putExtra("config",config);
         context.startActivity(intent);
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picutre_select);
         if(isSelectedList == null) isSelectedList = new ArrayList<>();
+        if(getSupportActionBar() != null){
+            getSupportActionBar().hide();   //隐藏自带标题栏
+        }
         Log.e(TAG,isSelectedList.toString());
         initView();
+        initConfig();
         getPermission(this);
     }
 
-
+    /**
+     * 初始化配置
+     */
+    PhotoPickerConfig config;
+    private void initConfig() {
+        Intent intent = getIntent();
+        config = (PhotoPickerConfig)intent.getSerializableExtra("config");
+        //最大选择数量
+        maxNum = config.getMaxNum();
+        //标题栏
+        titleBar.setHeight((int) config.getTitleBar_height());
+        titleBar.setColor(config.getTitleBar_color());
+        titleBar.setTitleBarTextColor(config.getTitleBar_text_color());
+        //图片显示列数
+        columnNum = config.getColumnNum();
+    }
 
 
     public void initView() {
@@ -90,7 +120,10 @@ public class PictureSelectActivity extends BaseActivity {
 
         titleBar = findViewById(R.id.title_pct_select);
         titleBar.getTv_btn_title_bar().setOnClickListener(getOnclickListener());
-        titleBar.setNextEnable(true);
+        titleBar.setNextEnable(false);  //一开始禁止确认选择
+//        titleBar.getTv_title_bar().setHeight((int) config.getTitleBar_height());
+
+
 
 
         initSelectedView(); //添加已选列表视图
@@ -204,10 +237,10 @@ public class PictureSelectActivity extends BaseActivity {
                         spinner_album.setAdapter(new SpinnerAdapter(albumInfoList));
                         spinner_album.setOnItemSelectedListener(getAlbumSelectListener());
                         //瀑布布局，列数，方向
-                        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL);
+                        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(columnNum, StaggeredGridLayoutManager.VERTICAL);
                         recyclerImgSelect.setLayoutManager(layoutManager);
 //                        if(pictureInfoList!=null && pictureInfoList.size()>0){
-                        adapter = new PictureSelectAdapter(pictureInfoList, 9);
+                        adapter = new PictureSelectAdapter(pictureInfoList, maxNum);
                         recyclerImgSelect.setAdapter(adapter);
                         recyclerImgSelect.setHasFixedSize(true);
 //                        }
@@ -258,10 +291,7 @@ public class PictureSelectActivity extends BaseActivity {
                     new AlertDialog.Builder(this)
                             .setMessage(R.string.request_permission_again)
                             .setPositiveButton(R.string.confirm, (dialog1, which) ->
-//                                    ActivityCompat.requestPermissions(this,
-//                                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-//                                            100)
-                                            getPermission(this)
+                                    getPermission(this)
                             )
                             .setNegativeButton(R.string.cancel, null)
                             .create()

@@ -14,7 +14,8 @@
     <!--修正底部导航栏文字离底部的高度-->
     <dimen name="fixed_height_bottom_padding">6dp</dimen>
 
-    <dimen name="actionBar_Height">45dp</dimen>
+    <!--标题栏高度-->
+    <dimen name="actionbar_height">45dp</dimen>
     <dimen name="radius_block">8dp</dimen>
     <dimen name="radius_button">34dp</dimen>
 

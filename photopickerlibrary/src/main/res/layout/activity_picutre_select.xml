@@ -35,7 +35,6 @@
           android:id="@+id/recycler_img_select"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
-
           android:scrollbars="vertical"
           android:layout_marginTop="@dimen/fu_border_img"
           android:layout_marginBottom="@dimen/fu_border_img"

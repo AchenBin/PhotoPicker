@@ -25,6 +25,8 @@ public class TitleBar extends ConstraintLayout {
     private TextView tv_title_bar;
     private TextView tv_btn_title_bar;
 
+    private int enableColor;    //下一步按钮可操作时的颜色
+
     public TitleBar(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context,attrs);
         LayoutInflater.from(context).inflate(R.layout.bar_title,this);
@@ -50,6 +52,7 @@ public class TitleBar extends ConstraintLayout {
             setNextBtnSrc(context.getDrawable(id));
         }
 
+        enableColor = getContext().getColor(R.color.white);
     }
 
 
@@ -81,12 +84,12 @@ public class TitleBar extends ConstraintLayout {
     public void setOKBtn(){
 //        getTv_title_bar().setText(R.string.adjust);
         getTv_btn_title_bar().setText(R.string.complete);
-        getTv_btn_title_bar().setTextColor(getContext().getColor(R.color.white));
+        getTv_btn_title_bar().setTextColor(enableColor);
     }
 
     public void setNextEnable(boolean isEnable){
         if(isEnable){
-            getTv_btn_title_bar().setTextColor(getResources().getColor(R.color.white,null));
+            getTv_btn_title_bar().setTextColor(enableColor);
             getTv_btn_title_bar().setEnabled(true);
         }else{
             getTv_btn_title_bar().setTextColor(getResources().getColor(R.color.white_translucence,null));
@@ -127,5 +130,22 @@ public class TitleBar extends ConstraintLayout {
         layoutParams.height = 90;
         tv_btn_title_bar.setLayoutParams(layoutParams);
         tv_btn_title_bar.setBackground(drawable);
+    }
+    //设置标题栏高度
+    public void setHeight(int height){
+        TextView title_textView = getTv_title_bar();
+        ViewGroup.LayoutParams layoutParams = title_textView.getLayoutParams();
+        layoutParams.height = height;
+        title_textView.setLayoutParams(layoutParams);
+    }
+    //设置标题栏颜色
+    public void setColor(int color){
+        getTv_title_bar().setBackgroundColor(color);
+    }
+    //设置下一步按钮可操作时的颜色
+    public void setTitleBarTextColor(int color){
+        enableColor = color;
+        tv_title_bar.setTextColor(color);
+        tv_back.setColorFilter(color);
     }
 }

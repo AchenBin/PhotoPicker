@@ -33,9 +33,12 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void clickToStart(View view) {
-        new PhotoPickerBuilder()
-                .with(this)
+        new PhotoPickerBuilder(this)
                 .setMaxSelectNum(1)
+                .setColumnNum(3)
+                .setTitleBarTextColor(R.color.light_red)
+                .setTitleBarHeight(getResources().getDimension(R.dimen.actionbar_height))
+                .setTitleBarColor(R.color.black)
                 .setOnSelectConfirmListener(new OnSelectConfirmListener() {
                     @Override
                     public void onSelected(List<PictureItem> pictureItemList) {

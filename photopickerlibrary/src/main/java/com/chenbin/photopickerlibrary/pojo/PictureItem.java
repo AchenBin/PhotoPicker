@@ -18,14 +18,14 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class PictureItem implements Serializable {
-    private String path;
-    private String type;
-    private String name;
-    private float size;
-    private String width;
-    private String height;
-    private long Date;
-    private int orientation;
+    private String path;    //图片的绝对地址
+    private String type;    //图片的类型
+    private String name;    //图片名称
+    private float size;     //图片大小
+    private String width;   //图片宽度
+    private String height;  //图片高度
+    private long Date;      //图片生成日期
+    private int orientation;    //图片角度
 
 
     private boolean isLoading = false;  //是否处于加载中
